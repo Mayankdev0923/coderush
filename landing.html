@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. https://webflow.com --><!-- Last Published: Sun Aug 25 2024 04:07:56 GMT+0000 (Coordinated Universal Time) -->
+<html
+  data-wf-domain="code-rush-6a0f8c-aa9fc21576c792d2ea790e.webflow.io"
+  data-wf-page="66c6315db14a60029726a2ea"
+  data-wf-site="66c6315db14a60029726a2ed"
+  data-wf-status="1"
+>
+  <head>
+    <script>
+      //TIMER FOR EVENTS OF HACKATHON
+      document.addEventListener("DOMContentLoaded", function () {
+        // Set the date we're counting down to
+        var countDownDate = new Date("Sept 03, 2024 23:59:59").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+          // Get today's date and time
+          var now = new Date().getTime();
+
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          // Display the result in the elements with the corresponding classes
+          document.querySelector(".days").innerHTML = days;
+          document.querySelector(".hours").innerHTML = hours;
+          document.querySelector(".minutes").innerHTML = minutes;
+          document.querySelector(".seconds").innerHTML = seconds;
+
+          // If the count down is over, write some text
+          if (distance < 0) {
+            clearInterval(x);
+            document.querySelector(".countdown").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+      });
+    </script>
+
+    <meta charset="utf-8" />
+    <title>Copy of Code Rush</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Webflow" name="generator" />
+    <link href="landing.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link
+      href="https://fonts.gstatic.com"
+      rel="preconnect"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      WebFont.load({
+        google: {
+          families: [
+            "Oswald:200,300,400,500,600,700",
+            "Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic",
+            "Exo:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic",
+            "Fira Code:regular,500,600",
+            "Press Start 2P:regular",
+            "Source Code Pro:300,regular,500,600,700,200italic,italic",
+            "Material Icons:regular",
+            "Inria Sans:300,300italic,regular,italic,700,700italic",
+          ],
+        },
+      });
+    </script>
+    <script type="text/javascript">
+      !(function (o, c) {
+        var n = c.documentElement,
+          t = " w-mod-";
+        (n.className += t + "js"),
+          ("ontouchstart" in o ||
+            (o.DocumentTouch && c instanceof DocumentTouch)) &&
+            (n.className += t + "touch");
+      })(window, document);
+    </script>
+    <link
+      href="https://cdn.prod.website-files.com/60dd72519d9f9f67690ae425/60de8d357335a42da7f2fd77_Favicon.png"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.prod.website-files.com/66b721737f26e842267ae3f3/66b721747f26e842267ae524_Webclip.png"
+      rel="apple-touch-icon"
+    />
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "4826335367381214");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=4826335367381214&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <meta
+      name="facebook-domain-verification"
+      content="h0yqjoqg36qy6e7gcid2aluxw9wii4"
+    />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div data-w-id="582363d9-b9cb-4f5c-6761-bce893317614" class="waves-bar-5">
+        <div class="waves-content-bar-5">
+          <div class="waves---paragraph-regular-5">
+            Registration Ends September 3rd, 2024
+          </div>
+          <a href="https://devfolio.co/" class="waves---cta-bar-4 w-button"
+            >Register Now</a
+          >
+        </div>
+        <img
+          src="https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c6315db14a60029726a321_cancel.svg"
+          loading="lazy"
+          data-w-id="582363d9-b9cb-4f5c-6761-bce89331761a"
+          alt=""
+          class="waves-dismmiss-bar-4"
+        />
+      </div>
+      <div class="section-hero" id="section-hero">
+        <div class="background-layer" id="background-layer"></div>
+        <div class="hero-nav">
+          <a
+            href="landing.html"
+            aria-current="page"
+            class="relume-link w-inline-block w--current"
+            ><img
+              src="https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c6315db14a60029726a31f_Screenshot_2024-08-10_134609-removebg-preview.png"
+              loading="lazy"
+              sizes="(max-width: 479px) 25vw, 100px"
+              srcset="
+                https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c6315db14a60029726a31f_Screenshot_2024-08-10_134609-removebg-preview-p-500.png 500w,
+                https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c6315db14a60029726a31f_Screenshot_2024-08-10_134609-removebg-preview.png       711w
+              "
+              alt=""
+              class="image-2"
+          /></a>
+          <div class="hero-nav_button-wrapper">
+            <a
+              href="faq.html"
+              class="button-icon-small-secondary margin-right-small mobile-margin-right-zero w-inline-block"
+              ><img
+                src="https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c6315db14a60029726a317_library%20icon2.png"
+                loading="lazy"
+                srcset="
+                  https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c6315db14a60029726a317_library%2520icon2-p-500.png   500w,
+                  https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c6315db14a60029726a317_library%2520icon2-p-800.png   800w,
+                  https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c6315db14a60029726a317_library%2520icon2-p-1080.png 1080w,
+                  https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c6315db14a60029726a317_library%20icon2.png          1600w
+                "
+                sizes="(max-width: 479px) 100vw, 24px"
+                alt=""
+                class="button-icon"
+              />
+              <div>FAQ</div></a
+            ><link rel="prefetch" href="/" /><a
+              href="https://devfolio.co/"
+              class="button-icon-small register w-inline-block"
+              ><div>REGISTER NOW</div></a
+            >
+            <div class="apply-button-div">
+              <div
+                class="apply-button"
+                data-hackathon-slug="CODE-RUSH"
+                data-button-theme="light"
+                style="height: 44px; width: 312px"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="padding-vertical-xxlarge">
+            <div class="timeline-hero_heading-wrapper">
+              <img
+                class="image"
+                src="https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c6315db14a60029726a31f_Screenshot_2024-08-10_134609-removebg-preview.png"
+                alt=""
+                style="
+                  -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
+                    rotateX(0) rotateY(-720deg) rotateZ(0) skew(0, 0);
+                  -moz-transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
+                    rotateX(0) rotateY(-720deg) rotateZ(0) skew(0, 0);
+                  -ms-transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
+                    rotateX(0) rotateY(-720deg) rotateZ(0) skew(0, 0);
+                  transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0)
+                    rotateY(-720deg) rotateZ(0) skew(0, 0);
+                  transform-style: preserve-3d;
+                "
+                sizes="(max-width: 991px) 90vw, 72vw"
+                data-w-id="2157f66b-3883-08fc-826e-a913bb76c1f6"
+                loading="lazy"
+                srcset="
+                  https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c6315db14a60029726a31f_Screenshot_2024-08-10_134609-removebg-preview-p-500.png 500w,
+                  https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c6315db14a60029726a31f_Screenshot_2024-08-10_134609-removebg-preview.png       711w
+                "
+              />
+              <h1 class="heading-3">Innovate . Code . Transform</h1>
+              <div class="margin-bottom-medium">
+                <h4 class="heading-2">
+                  A <strong>24hr</strong> Hackathon organised by<br />
+                  <span class="text-span"
+                    ><strong class="bold-text"
+                      >GURUGRAM UNIVERSITY</strong
+                    ></span
+                  >
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="waves-bar-4">
+        <div class="waves-content-bar-4">
+          <div class="waves---paragraph-regular-4">Sponsored By</div>
+        </div>
+      </div>
+      <div class="waves---section-medium-8">
+        <div class="waves-master-logos-1">
+          <div class="waves-wrap-logos-1">
+            <img
+              src="https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c8d07fc7789ca209f281e1_Slack.svg"
+              loading="lazy"
+              alt=""
+              class="waves-image-logo-1"
+            /><img
+              src="https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c8d080c7789ca209f2820a_Nestle.svg"
+              loading="lazy"
+              id="w-node-_86d9ffd1-8978-413a-6a2a-158200d0e14c-9726a2ea"
+              alt=""
+              class="waves-image-logo-1"
+            /><img
+              src="https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c8d07fc7789ca209f281c1_Morning.svg"
+              loading="lazy"
+              id="w-node-_86d9ffd1-8978-413a-6a2a-158200d0e14d-9726a2ea"
+              alt=""
+              class="waves-image-logo-1"
+            /><img
+              src="https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c8d080c7789ca209f281fd_Pepsico.svg"
+              loading="lazy"
+              id="w-node-_86d9ffd1-8978-413a-6a2a-158200d0e14e-9726a2ea"
+              alt=""
+              class="waves-image-logo-1"
+            /><img
+              src="https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c8d07fc7789ca209f28189_Deliveroo.svg"
+              loading="lazy"
+              alt=""
+              class="waves-image-logo-1"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="section-footer">
+        <div class="waves-bar-4">
+          <div class="waves-content-bar-4">
+            <div class="waves---paragraph-regular-4">
+              event starts on 14th sept, 2024
+            </div>
+          </div>
+        </div>
+        <div class="timercontainer">
+          <div class="padding-vertical-footer">
+            <h1 class="heading-3">Time Left To Register:</h1>
+            <div class="div-block">
+              <div class="w-layout-vflex timecont">
+                <div class="days">00</div>
+                <div class="timerspecs">Days</div>
+              </div>
+              <div class="colon">:</div>
+              <div class="w-layout-vflex timecont">
+                <div class="hours">00</div>
+                <div class="timerspecs">Hours</div>
+              </div>
+              <div class="colon">:</div>
+              <div class="w-layout-vflex timecont">
+                <div class="minutes">00</div>
+                <div class="timerspecs">Minutes</div>
+              </div>
+              <div class="colon">:</div>
+              <div class="w-layout-vflex timecont">
+                <div class="seconds">00</div>
+                <div class="timerspecs">Seconds</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="waves-bar-4">
+          <div class="waves-content-bar-4">
+            <div class="waves---paragraph-regular-4">PROBLEM STATEMENTS</div>
+          </div>
+        </div>
+      </div>
+      <div class="waves---section-medium-7">
+        <div class="waves---main-container-4 w-container">
+          <div class="waves---center-heading">
+            <h2 class="waves---heading-2-no-margins-4">Problem Statements</h2>
+            <div class="waves---paragraph-big-4">
+              Real-world challenges or tasks that participants need to solve or
+              create solutions for.
+            </div>
+            <div class="w-layout-hflex flex-block-7">
+              <a
+                data-w-id="a664883a-9079-d330-274d-abc140d289a3"
+                href="https://keshavv-chauhan.github.io/code_rush/problems/P3.pdf"
+                class="link-block-2 w-inline-block"
+                ><img
+                  src="https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c8bdf12c1b03c04c6b9a6d_Unlock%20the%20Best%20AI%20Tools%20%26%20GPTs%20for%20Your%20Success.jpeg"
+                  loading="lazy"
+                  style="
+                    display: none;
+                    -webkit-transform: translate3d(0, 0, 0) scale3d(2, 2, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -moz-transform: translate3d(0, 0, 0) scale3d(2, 2, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -ms-transform: translate3d(0, 0, 0) scale3d(2, 2, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    transform: translate3d(0, 0, 0) scale3d(2, 2, 1) rotateX(0)
+                      rotateY(0) rotateZ(0) skew(0, 0);
+                    opacity: 0;
+                  "
+                  sizes="136.265625px"
+                  alt=""
+                  srcset="
+                    https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c8bdf12c1b03c04c6b9a6d_Unlock%2520the%2520Best%2520AI%2520Tools%2520%2526%2520GPTs%2520for%2520Your%2520Success-p-500.jpeg 500w,
+                    https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c8bdf12c1b03c04c6b9a6d_Unlock%20the%20Best%20AI%20Tools%20%26%20GPTs%20for%20Your%20Success.jpeg                           736w
+                  "
+                  class="image-6"
+                />
+                <div class="cardtxet">AI / ML</div></a
+              ><a
+                data-w-id="925694a6-25aa-5a0a-6e13-a4ec65f26b2a"
+                href="https://keshavv-chauhan.github.io/code_rush/problems/P2.pdf"
+                class="link-block-2 w-inline-block"
+                ><img
+                  src="https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c8bdf22c1b03c04c6b9b50_Revolutionizing%20Healthcare%20with%20Augmented%20Reality.jpeg"
+                  loading="lazy"
+                  style="
+                    display: none;
+                    -webkit-transform: translate3d(0, 0, 0) scale3d(2, 2, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -moz-transform: translate3d(0, 0, 0) scale3d(2, 2, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -ms-transform: translate3d(0, 0, 0) scale3d(2, 2, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    transform: translate3d(0, 0, 0) scale3d(2, 2, 1) rotateX(0)
+                      rotateY(0) rotateZ(0) skew(0, 0);
+                    opacity: 0;
+                  "
+                  sizes="126.6875px"
+                  alt=""
+                  srcset="
+                    https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c8bdf22c1b03c04c6b9b50_Revolutionizing%2520Healthcare%2520with%2520Augmented%2520Reality-p-500.jpeg 500w,
+                    https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c8bdf22c1b03c04c6b9b50_Revolutionizing%20Healthcare%20with%20Augmented%20Reality.jpeg               582w
+                  "
+                  class="image-6" />
+                <div class="cardtxet">HEALTH TECH<br /></div></a
+              ><a
+                data-w-id="dd6b29d2-bb90-e794-b384-cf311179c9e1"
+                href="https://keshavv-chauhan.github.io/code_rush/problems/P1.pdf"
+                class="link-block-2 w-inline-block"
+                ><img
+                  src="https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c8bdf12c1b03c04c6b9a8f_Sky%20High%20Harvests!%20%F0%9F%8C%B1%20Revolutionizing%20Farming%20with%20Drone%20Technology%20%F0%9F%8C%BE%F0%9F%9A%9C.jpeg"
+                  loading="lazy"
+                  style="
+                    display: none;
+                    -webkit-transform: translate3d(0, 0, 0) scale3d(2, 2, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -moz-transform: translate3d(0, 0, 0) scale3d(2, 2, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -ms-transform: translate3d(0, 0, 0) scale3d(2, 2, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    transform: translate3d(0, 0, 0) scale3d(2, 2, 1) rotateX(0)
+                      rotateY(0) rotateZ(0) skew(0, 0);
+                    opacity: 0;
+                  "
+                  sizes="136.265625px"
+                  alt=""
+                  srcset="
+                    https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c8bdf12c1b03c04c6b9a8f_Sky%2520High%2520Harvests!%2520%25F0%259F%258C%25B1%2520Revolutionizing%2520Farming%2520with%2520Drone%2520Technology%2520%25F0%259F%258C%25BE%25F0%259F%259A%259C-p-500.jpeg 500w,
+                    https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c8bdf12c1b03c04c6b9a8f_Sky%20High%20Harvests!%20%F0%9F%8C%B1%20Revolutionizing%20Farming%20with%20Drone%20Technology%20%F0%9F%8C%BE%F0%9F%9A%9C.jpeg                                                 736w
+                  "
+                  class="image-6"
+                />
+                <div class="cardtxet">AGRIC TECH</div></a
+              ><a
+                data-w-id="975bb37b-743c-4422-ffe0-c65b7d1dd3fb"
+                href="https://keshavv-chauhan.github.io/code_rush/problems/P4.pdf"
+                class="link-block-2 w-inline-block"
+                ><img
+                  src="https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c8bdf22c1b03c04c6b9adb_Cyber%20Security%20Testing.jpeg"
+                  loading="lazy"
+                  style="
+                    display: none;
+                    -webkit-transform: translate3d(0, 0, 0) scale3d(2, 2, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -moz-transform: translate3d(0, 0, 0) scale3d(2, 2, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -ms-transform: translate3d(0, 0, 0) scale3d(2, 2, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    transform: translate3d(0, 0, 0) scale3d(2, 2, 1) rotateX(0)
+                      rotateY(0) rotateZ(0) skew(0, 0);
+                    opacity: 0;
+                  "
+                  sizes="136.265625px"
+                  alt=""
+                  srcset="
+                    https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c8bdf22c1b03c04c6b9adb_Cyber%2520Security%2520Testing-p-500.jpeg 500w,
+                    https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c8bdf22c1b03c04c6b9adb_Cyber%20Security%20Testing.jpeg           736w
+                  "
+                  class="image-6"
+                />
+                <div class="cardtxet">CYBER TECH</div></a
+              ><a
+                data-w-id="7f574878-2730-2485-556f-031cc32c88e1"
+                href="https://keshavv-chauhan.github.io/code_rush/problems/P5.pdf"
+                class="link-block-2 w-inline-block"
+                ><img
+                  src="https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c8bdf22c1b03c04c6b9b04_green.jpeg"
+                  loading="lazy"
+                  style="
+                    display: none;
+                    -webkit-transform: translate3d(0, 0, 0) scale3d(2, 2, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -moz-transform: translate3d(0, 0, 0) scale3d(2, 2, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -ms-transform: translate3d(0, 0, 0) scale3d(2, 2, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    transform: translate3d(0, 0, 0) scale3d(2, 2, 1) rotateX(0)
+                      rotateY(0) rotateZ(0) skew(0, 0);
+                    opacity: 0;
+                  "
+                  sizes="136.265625px"
+                  alt=""
+                  srcset="
+                    https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c8bdf22c1b03c04c6b9b04_green-p-500.jpeg 500w,
+                    https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c8bdf22c1b03c04c6b9b04_green.jpeg       736w
+                  "
+                  class="image-6"
+                />
+                <div class="cardtxet">GREEN TECH</div></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="waves-bar-4">
+        <div class="waves-content-bar-4">
+          <div class="waves---paragraph-regular-4">Timeline</div>
+        </div>
+      </div>
+      <div class="section-timeline-heading">
+        <div class="container">
+          <div class="padding-vertical-xlarge">
+            <div class="timeline-main_heading-wrapper">
+              <div class="margin-bottom-medium">
+                <h2>Rush in to explore all about coderush</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-timeline">
+        <div class="container">
+          <div class="timeline_component">
+            <div class="timeline_progress">
+              <div class="timeline_progress-bar"></div>
+            </div>
+            <div
+              data-w-id="d5abcf1f-3370-3eea-ccfd-66f076babfe0"
+              class="timeline_item"
+            >
+              <div
+                id="w-node-d5abcf1f-3370-3eea-ccfd-66f076babfe1-9726a2ea"
+                class="timeline_left"
+              >
+                <div class="timeline_date-text">About Code Rush</div>
+              </div>
+              <div
+                id="w-node-d5abcf1f-3370-3eea-ccfd-66f076babfe4-9726a2ea"
+                class="timeline_centre"
+              >
+                <div class="timeline_circle"></div>
+              </div>
+              <div
+                id="w-node-d5abcf1f-3370-3eea-ccfd-66f076babfe6-9726a2ea"
+                class="timeline_right"
+              >
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    We are thrilled to announce the launch of CodeRush, our
+                    first online hackathon organised by GURUGRAM UNIVERSITY.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              data-w-id="0488106f-ce92-9b7b-01c3-8ad75f3f5e35"
+              class="timeline_item"
+            >
+              <div
+                id="w-node-_0488106f-ce92-9b7b-01c3-8ad75f3f5e36-9726a2ea"
+                class="timeline_left"
+              >
+                <div class="timeline_date-text">Time &amp; Venue</div>
+              </div>
+              <div
+                id="w-node-_0488106f-ce92-9b7b-01c3-8ad75f3f5e39-9726a2ea"
+                class="timeline_centre"
+              >
+                <div class="timeline_circle"></div>
+              </div>
+              <div class="timeline_right">
+                <div class="margin-bottom-medium">
+                  <div class="timeline_text">
+                    CodeRush is organised by Gurugram University venued at its
+                    campus near Presidium School, Sector-51, Gurugram<br />
+                  </div>
+                  <a href="#" class="button-2 w-button" target="_blank"
+                    >Click To Get Full TimeLine</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              data-w-id="57af255d-af06-4f90-7d3e-ca27eba84ae0"
+              class="timeline_item"
+            >
+              <div
+                id="w-node-_57af255d-af06-4f90-7d3e-ca27eba84ae1-9726a2ea"
+                class="timeline_left"
+              >
+                <div class="timeline_date-text">Networking</div>
+              </div>
+              <div
+                id="w-node-_57af255d-af06-4f90-7d3e-ca27eba84ae4-9726a2ea"
+                class="timeline_centre"
+              >
+                <div class="timeline_circle"></div>
+              </div>
+              <div class="timeline_right">
+                <div class="margin-bottom-medium">
+                  <div class="timeline_text">
+                    Throughout the event, participants can engage in informal
+                    conversations, join in-person networking sessions, and
+                    participate in team-building activities. <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              data-w-id="d53b13ff-3dea-1b6a-18df-20fb58ffac66"
+              class="timeline_item"
+            >
+              <div
+                id="w-node-d53b13ff-3dea-1b6a-18df-20fb58ffac67-9726a2ea"
+                class="timeline_left"
+              >
+                <div class="timeline_date-text">Closing and Award Ceremony</div>
+              </div>
+              <div
+                id="w-node-d53b13ff-3dea-1b6a-18df-20fb58ffac6a-9726a2ea"
+                class="timeline_centre"
+              >
+                <div class="timeline_circle"></div>
+              </div>
+              <div class="timeline_right">
+                <div class="margin-bottom-medium">
+                  <div class="timeline_text">
+                    The hackathon concludes with a closing and award ceremony,
+                    where organizers reflect on the event&#x27;s highlights and
+                    celebrate participants&#x27; achievements.<br /><br />Winners
+                    are announced, with prizes awarded to the top teams,
+                    followed by words of encouragement and future
+                    opportunities.<br />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="overlay-fade-bottom"></div>
+            <div class="overlay-fade-top"></div>
+          </div>
+        </div>
+      </div>
+      <div class="section-timeline-cta">
+        <div class="container">
+          <div class="padding-vertical-xlarge">
+            <div class="timeline-main_heading-wrapper">
+              <div class="margin-bottom-medium">
+                <div class="tracks">Exciting Prizes await you</div>
+              </div>
+              <div class="margin-bottom-small">
+                <div
+                  data-w-id="116bac3a-d0c2-e74e-4872-9bf84464d1e8"
+                  style="opacity: 0"
+                  class="prizenormal"
+                >
+                  Nothing beats a proper reward. Here&#x27;s what you will win :
+                </div>
+              </div>
+            </div>
+            <div class="rl_pricing18_component">
+              <div class="rl_pricing18_plans"></div>
+              <img
+                src="https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66caac2edde493cf81ebbac4_file%20(2).png"
+                loading="lazy"
+                data-w-id="99ff6e83-0314-d047-88d5-99eb7830aaba"
+                sizes="90vw"
+                alt=""
+                srcset="
+                  https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66caac2edde493cf81ebbac4_file%20(2)-p-500.png   500w,
+                  https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66caac2edde493cf81ebbac4_file%20(2)-p-800.png   800w,
+                  https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66caac2edde493cf81ebbac4_file%20(2)-p-1080.png 1080w,
+                  https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66caac2edde493cf81ebbac4_file%20(2)-p-1600.png 1600w,
+                  https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66caac2edde493cf81ebbac4_file%20(2)-p-2000.png 2000w,
+                  https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66caac2edde493cf81ebbac4_file%20(2)-p-2600.png 2600w,
+                  https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66caac2edde493cf81ebbac4_file%20(2).png        2800w
+                "
+                class="image-5"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="waves-bar-6">
+        <div class="waves-container-bar-4 w-container">
+          <div class="waves-flex-bar-4">
+            <div class="waves---paragraph-regular-6">
+              Where To Reach? Note down aour address
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="section">
+        <a class="map w-inline-block"
+          ><iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.8528593662136!2d77.06310347603292!3d28.423696393532495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d227849889109%3A0x36f22da384db52d5!2sGurugram%20University!5e0!3m2!1sen!2sin!4v1724519845579!5m2!1sen!2sin"
+            width="100%"
+            height="450"
+            style="border: 0; filter: invert(90%)"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe
+        ></a>
+      </section>
+      <div class="section-footer">
+        <div class="waves-bar-6">
+          <div class="waves-container-bar-4 w-container">
+            <div class="waves-flex-bar-4">
+              <div class="waves---paragraph-regular-6">
+                Register before deadline to secure your seat...
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="padding-vertical-footer">
+            <div class="footer_text-wrapper">
+              <div class="margin-bottom-small">
+                <h2 class="heading-4">Haven&#x27;t registered yet?</h2>
+              </div>
+              <div class="margin-bottom-medium">
+                <h4 class="heading-9">
+                  Think you&#x27;re a coding genius?<br />
+                  Prove it! Register now and take on the ultimate programming
+                  challenge!
+                </h4>
+              </div>
+              <div class="button-wrapper">
+                <a
+                  href="mailto:query@coderushgug.live?subject=Question%20Regarding%20CodeRush"
+                  class="button-icon-small margin-right-small w-inline-block"
+                  ><img
+                    src="https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c6315db14a60029726a302_email-icon-white.svg"
+                    loading="lazy"
+                    alt=""
+                    class="button-icon"
+                  />
+                  <div>Reach US</div></a
+                >
+                <a
+                  href="https://discord.com/invite/hc5GccjG"
+                  class="button-icon-small margin-right-small w-inline-block"
+                  ><img
+                    src="https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c6315db14a60029726a302_email-icon-white.svg"
+                    loading="lazy"
+                    alt=""
+                    class="button-icon"
+                  />
+                  <div>Discord</div></a
+                ><a
+                  href="https://devfolio.co/"
+                  class="button-icon-small-secondary w-inline-block"
+                  ><img
+                    src="https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c6315db14a60029726a320_fYsHUznU_400x400.png"
+                    loading="lazy"
+                    alt=""
+                    class="button-icon"
+                  />
+                  <div>register</div></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <a
+          data-w-id="bcba534a-fa3b-19c3-3946-ece2141db938"
+          href="https://drive.google.com/uc?export=download&amp;id=1-CeRcux-GNmpQQ-48Oah1YpOKEC14fBu"
+          class="button-inverted w-button"
+          >Get Brochure</a
+        >
+      </div>
+      <div class="waves-bar-6">
+        <div class="waves-container-bar-4 w-container">
+          <div class="waves-flex-bar-4"></div>
+        </div>
+      </div>
+      <div class="waves-footer-2">
+        <div class="waves---main-container-6 w-container">
+          <div class="waves-top-footer-2">
+            <div class="waves-top-left-footer-2">
+              <a href="#" class="waves-brand-link-footer-2 w-inline-block"
+                ><img
+                  src="https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c6315db14a60029726a31f_Screenshot_2024-08-10_134609-removebg-preview.png"
+                  loading="lazy"
+                  sizes="(max-width: 479px) 88vw, (max-width: 991px) 350px, 31vw"
+                  srcset="
+                    https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c6315db14a60029726a31f_Screenshot_2024-08-10_134609-removebg-preview-p-500.png 500w,
+                    https://cdn.prod.website-files.com/66c6315db14a60029726a2ed/66c6315db14a60029726a31f_Screenshot_2024-08-10_134609-removebg-preview.png       711w
+                  "
+                  alt=""
+                  class="waves-brand-footer-2"
+              /></a>
+            </div>
+            <div class="waves-top-right-footer-2">
+              <div class="waves-column-links-footer-2">
+                <div class="waves---paragraph-regular-9">
+                  Gurugram <br />University
+                </div>
+                <div class="waves-links-wrap-footer-2">
+                  <a
+                    href="http://gurugramuniversity.ac.in/"
+                    class="waves-link-footer-2"
+                    >Website</a
+                  ><a
+                    href="https://www.instagram.com/gurugram.university"
+                    class="waves-link-footer-2"
+                    >Instagram</a
+                  ><a
+                    href="http://www.facebook.com/gurugramuniversity.ac.in/"
+                    class="waves-link-footer-2"
+                    >Facebook</a
+                  >
+                </div>
+              </div>
+              <div class="waves-column-links-footer-2">
+                <div class="waves---paragraph-regular-9">ETHIndia</div>
+                <div class="waves-links-wrap-footer-2">
+                  <a href="https://ethindia.co/" class="waves-link-footer-2"
+                    >Website</a
+                  ><a
+                    href="https://twitter.com/ethindiaco"
+                    class="waves-link-footer-2"
+                    >Twitter</a
+                  ><a
+                    href="https://www.instagram.com/ethindiaco"
+                    class="waves-link-footer-2"
+                    >Instagram</a
+                  >
+                </div>
+              </div>
+              <div class="waves-column-links-footer-2">
+                <div class="waves---paragraph-regular-9">Polygon</div>
+                <div class="waves-links-wrap-footer-2">
+                  <a href="#" class="waves-link-footer-2">Website</a
+                  ><a
+                    href="https://twitter.com/0xPolygon"
+                    class="waves-link-footer-2"
+                    >Twitter</a
+                  ><a
+                    href="https://www.instagram.com/0xpolygon/"
+                    class="waves-link-footer-2"
+                    >Instagram</a
+                  >
+                </div>
+              </div>
+              <div class="waves-column-links-footer-2">
+                <div class="waves---paragraph-regular-9">Devfolio</div>
+                <div class="waves-links-wrap-footer-2">
+                  <a href="#" class="waves-link-footer-2">Website</a
+                  ><a
+                    href="https://www.linkedin.com/company/devfolio"
+                    class="waves-link-footer-2"
+                    >LinkedIn</a
+                  ><a href="#" class="waves-link-footer-2">Instagram</a
+                  ><a href="#" class="waves-link-footer-2">Facebook</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="waves-divider-footer-2"></div>
+          <div class="waves-bottom-footer-2">
+            <div class="waves---paragraph-small">
+              query@coderushgug.live © 2024, CodeRush. All Rights Reserved.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=66c6315db14a60029726a2ed"
+      type="text/javascript"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script src="landing.js" type="text/javascript"></script>
+    <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
+  </body>
+</html>
